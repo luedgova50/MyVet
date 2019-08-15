@@ -1,9 +1,10 @@
 ﻿namespace MyVet.Web.Data
 {
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
     using MyVet.Web.Data.Entities;
 
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext<User>
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
@@ -21,6 +22,8 @@
         public DbSet<History> Histories { get; set; }
 
         public DbSet<Agenda> Agendas { get; set; }
+
+        public DbSet<Manager> Managers { get; set; }
 
     }
 }
