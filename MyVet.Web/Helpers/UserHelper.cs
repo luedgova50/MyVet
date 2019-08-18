@@ -1,9 +1,10 @@
 ﻿namespace MyVet.Web.Helpers
 {
+    using System.Threading.Tasks;
     using Microsoft.AspNetCore.Identity;
     using MyVet.Web.Data.Entities;
     using MyVet.Web.Models;
-    using System.Threading.Tasks;
+    
 
     public class UserHelper : IUserHelper
     {

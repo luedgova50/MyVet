@@ -29,11 +29,11 @@
             await CheckRoles();
 
             var manager =
-                await CheckUserAsync("1010", "Juan", "Zuluaga", "jzuluaga55@gmail.com",
-                "350 634 2747", "Calle Luna Calle Sol", "Admin");
+                await CheckUserAsync("1010", "Luis Eduaro", "Gonzàlez Vargas", "luedgova1967@gmail.com",
+                "313 353 2295", "Calle Luna Calle Sol", "Admin");
 
-            var customer = await CheckUserAsync("2020", "Juan", "Zuluaga", "jzuluaga55@hotmail.com",
-                "350 634 2747", "Calle Luna Calle Sol", "Customer");
+            var customer = await CheckUserAsync("2020", "Luis Eduardo", "Gonzàlez Vargas", "luedgova1967@hotmail.com",
+                "315 832 0146", "Calle Luna Calle Sol", "Customer");
 
             await CheckPetTypesAsync();
 
@@ -79,7 +79,7 @@
                     Document = document
                 };
 
-                await _userHelper.AddUserAsync(user, "123456");
+                await _userHelper.AddUserAsync(user, "Luis1234&");
 
                 await _userHelper.AddUserToRoleAsync(user, role);
             }
@@ -149,7 +149,11 @@
             }
         }
 
-        private void AddPet(string name, Owner owner, PetType petType, string race)
+        private void AddPet(
+            string name, 
+            Owner owner, 
+            PetType petType, 
+            string race)
         {
             _dataContext.Pets.Add(new Pet
             {

@@ -1,15 +1,15 @@
 ﻿namespace MyVet.Web.Controllers
 {
-    using System;
-    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
     using MyVet.Web.Data;
     using MyVet.Web.Data.Entities;
+    
 
+    [Authorize(Roles = "Admin")]
     public class ManagersController : Controller
     {
         private readonly DataContext _context;
